@@ -2,6 +2,7 @@ import { MongoClient } from "mongodb";
 
 export class MongoDBService {
   private static instance: MongoDBService;
+  // tslint:disable-next-line : no-string-literal
   private readonly mongo = new MongoClient(process.env["MONGO_URI"] || "", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
